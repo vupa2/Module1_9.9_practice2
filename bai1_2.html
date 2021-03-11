@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[*Bài tập] Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+  <h4>Bài 1: Chuyển từ độ C sang độ F</h4>
+  <input type="number" id="C" onkeyup="calF(this.value)">
+  <label for="C">Độ C</label>
+  <input type="text" id="F" disabled>
+  <label for="F">Độ F</label>
+
+  <h4>Bài 2: Chuyển từ mét sang feet</h4>
+  <input type="number" id="m" onkeyup="calFeet(this.value)">
+  <label for="m">Meter</label>
+  <input type="text" id="f" disabled>
+  <label for="f">Feet</label>
+
+  <script>
+    function calF(value) {
+      document.getElementById('F').value = parseFloat(value * 9/5 + 32).toFixed(2);
+    }
+
+    function calFeet(value) {
+      document.getElementById('f').value = parseFloat(value * 3.2808).toFixed(2);
+    }
+  </script>
+</body>
+</html>
