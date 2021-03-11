@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[*Bài tập] Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+  <div id="bai3">
+    <h4>Bài 3: Tính diện tích hình vuông khi biết cạnh a</h4>
+    <input type="number" id="canh-vuong" min="0">
+    <label for="canh-vuong">m</label>
+    <button type="button" onclick="calSquare()">Tính diện tích</button>
+    <br>
+    <br>
+    <span>Diện tích hình vuông: </span>
+  </div>
+
+  <div id="bai4">
+    <h4>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b</h4>
+    <input type="number" id="chieu-1" min="0">
+    <label for="chieu-1">m</label>
+    <input type="number" id="chieu-2" min="0">
+    <label for="chieu-2">m</label>
+    <button type="button" onclick="calRectangular()">Tính diện tích</button>
+    <br>
+    <br>
+    <span>Diện tích hình chữ nhật: </span>
+  </div>
+
+  <div id="bai5">
+    <h4>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b</h4>
+    <input type="number" id="chieu-1" min="0">
+    <label for="chieu-rong">m</label>
+    <input type="number" id="chieu-2" min="0">
+    <label for="chieu-dai">m</label>
+    <button type="button" onclick="calTriangle()">Tính diện tích</button>
+    <br>
+    <br>
+    <span>Diện tích tam giác vuông: </span>
+  </div>
+  <script>
+    // Bai 1
+    function calSquare() {
+      const value = Math.pow(document.querySelector('#bai3 #canh-vuong').value, 2);
+      document.querySelector('#bai3 span').innerHTML = `Diện tích hình vuông: ${value} m<sup>2</sup>`;
+    }
+
+    // Bai 2
+    function calRectangular() {
+      const chieu1 = document.querySelector('#bai4 #chieu-1').value;
+      const chieu2 = document.querySelector('#bai4 #chieu-2').value;
+      const value = chieu1 * chieu2;
+      document.querySelector('#bai4 span').innerHTML = `Diện tích hình chữ nhật: ${value} m<sup>2</sup>`;
+    }
+    
+    // Bai 3
+    function calTriangle() {
+      const chieu1 = document.querySelector('#bai5 #chieu-1').value;
+      const chieu2 = document.querySelector('#bai5 #chieu-2').value;
+      const value = chieu1 * chieu2 / 2;
+      document.querySelector('#bai5 span').innerHTML = `Diện tích tam giác vuông: ${value} m<sup>2</sup>`;
+    }
+  </script>
+</body>
+</html>
